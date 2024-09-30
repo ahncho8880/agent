@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: control-agent
+#  config:
+#    activate:
+#      on-profile: common
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/agent?useUnicode=true&serverTimezone=Asia/Seoul
+    username: doncic
+    password: doncic
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: doncic
+    password: doncic
+rabbitmq:
+  queue:
+    name: queue-doncic
+  exchange:
+    name: doncic-exchange1
+  routing:
+    key : doncic-key1
+
+server:
+  port: 8090
